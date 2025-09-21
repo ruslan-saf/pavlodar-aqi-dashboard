@@ -698,15 +698,17 @@ This project has been funded by the Science Committee of the Ministry of Science
 
     refresh_counter = st.session_state[REFRESH_COUNTER_KEY]
 
+    auto_refresh_counter = 0
     if st_autorefresh is not None:
-        st_autorefresh(
+        auto_refresh_counter = st_autorefresh(
             interval=int(refresh_minutes * 60_000),
             limit=None,
             key=f"public_app_autorefresh_{refresh_minutes}",
         )
 
     with st.spinner("Fetching station telemetry..."):
-        snapshots_dict, fetched_at_iso = load_live_snapshots(refresh_counter)
+        counter = refresh_counter + int(auto_refresh_counter or 0)
+        snapshots_dict, fetched_at_iso = load_live_snapshots(counter)
 
     snapshots = list(snapshots_dict.values())
 
