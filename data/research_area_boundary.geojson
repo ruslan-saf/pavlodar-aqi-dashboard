@@ -1,0 +1,52 @@
+{
+  "type": "FeatureCollection",
+  "features": [
+    {
+      "type": "Feature",
+      "geometry": {
+        "type": "Polygon",
+        "coordinates": [
+          [
+            [
+              76.91721728211033,
+              52.23920420420421
+            ],
+            [
+              77.0325049401119,
+              52.23920420420421
+            ],
+            [
+              77.0325049401119,
+              52.31690690690691
+            ],
+            [
+              76.91721728211033,
+              52.31690690690691
+            ],
+            [
+              76.91721728211033,
+              52.23920420420421
+            ]
+          ]
+        ]
+      },
+      "properties": {
+        "name": "Research Area Boundary",
+        "description": "Expanded boundary based on station coordinates (2 km buffer)",
+        "original_bounds": {
+          "min_lat": 52.25722222222223,
+          "max_lat": 52.29888888888889,
+          "min_lon": 76.94666666666667,
+          "max_lon": 77.00305555555556
+        },
+        "expanded_bounds": {
+          "min_lat": 52.23920420420421,
+          "max_lat": 52.31690690690691,
+          "min_lon": 76.91721728211033,
+          "max_lon": 77.0325049401119
+        },
+        "buffer_km": 2
+      }
+    }
+  ]
+}
